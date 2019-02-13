@@ -64,12 +64,13 @@ https://www.youtube.com/watch?v=sBws8MSXN7A&t=0s&index=2&list=PLillGF-RfqbYeckUa
 	-  src/index.js entery point of react. this puts app.js into index.html
 		(serviceworker for progreesive webapps and offline content)
 		
-	Index.html <-- index.js <-- App.js <-- components
+	public/index.html <-- src/index.js <-- src/App.js <-- components
 	
 	- Clean up:
 		1. delete index.css, stop importing it into index.js
 		2. delete the logo.svg, stop importing it in app.js
-		3. delete all the other JSX, just have the main div 
-		4. update app.css
+		3. delete all the other JSX in app.js , just have the main div 
+		4. update app.css as to your liking
+		5. take out service worker in index.js
 		
 		
