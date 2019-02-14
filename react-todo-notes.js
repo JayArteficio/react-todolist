@@ -150,4 +150,6 @@ export default App;
 		- can show state by console.logging or using React chrome dev tools 
 		render() {
 			console.log(this.state.todos); // will show the state in console
-		
+12. Passing the state into the Todos component as a property
+	in app.js still:
+		< Todos todos={this.state.todos} />
