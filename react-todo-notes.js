@@ -71,6 +71,7 @@ https://www.youtube.com/watch?v=sBws8MSXN7A&t=0s&index=2&list=PLillGF-RfqbYeckUa
 		2. delete the logo.svg, stop importing it in app.js
 		3. delete all the other JSX in app.js , just have the main div 
 		4. update app.css as to your liking
-		5. take out service worker in index.js
+		5. take out service worker in index.js and file
+		6. take out image files
 		
 		
