@@ -157,3 +157,11 @@ export default App;
 	render() {
 		console.log(this.props.todos);
 		will show that the props have been passed, also in React dev tools
+
+13. Displaying state in the markup
+		- replace Todos return statement markup with a map of the todos array, that will give us desired JSX output 
+		eg.
+			return this.props.todos.map((todo) => (
+				<h3>{todo.title} </h3>
+			));
+14. 
