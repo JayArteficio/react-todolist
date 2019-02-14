@@ -226,6 +226,24 @@ export default App;
 				backgroundColor: '#f4f4f4'
 			}
 			// only use single brackets {} to call that variable
-			< div style = { itemStyle }
-}>
+			< div style = { itemStyle }>
+
+21. Adding style via function/method to make it dynamic (ie. change depending on state)
+
+		A. simple way
+			// make the styling method
+				getStyle = () => {
+					if (this.props.todo.completed) {
+						return {
+							backgroundColor: "red",
+							textDecoration: "line-through"
+						}
+					} else {
+						return {
+							textDecoration: 'none'
+						}
+					}
+				}
+			// run it in the div's style 
+				<div style={this.getStyle()}>
 

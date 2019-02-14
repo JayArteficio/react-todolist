@@ -4,10 +4,23 @@ import React, { Component } from "react";
 import PropTypes from "prop-types";
 
 export class TodoItem extends Component {
-  render() {
+    getStyle = () => {
+        if(this.props.todo.completed) {
+            return {
+                backgroundColor: "red",
+                textDecoration: "line-through"
+            }
+        } else {
+            return {
+                textDecoration: 'none'
+            }
+        }
+    }
+  
+    render() {
     return (
     //<div style={{ backgroundColor: "#f4f4f4" }}>
-      <div style={ itemStyle }>
+      <div style={ this.getStyle() }>
          <p> Todo Item: {this.props.todo.title} </p>
       </div>
     );
@@ -18,7 +31,7 @@ TodoItem.propTypes = {
 };
 
 //Style
-const itemStyle = {
-    backgroundColor: '#f4f4f4'
-}
+// const itemStyle = {
+//     backgroundColor: '#f4f4f4'
+// }
 export default TodoItem;
