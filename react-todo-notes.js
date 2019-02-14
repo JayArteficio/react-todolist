@@ -178,4 +178,7 @@ export default App;
 			< TodoItem todo = { todo } />
 				in TodoItem.js
 			<p> {this.props.todo.title} </p>
-		
+
+17. Add unique id in list to avoid the error
+
+			< TodoItem key = { todo.id } todo = { todo } />
