@@ -1,3 +1,6 @@
+import upperCase = require("upper-case");
+import { template } from "handlebars";
+
 Traversy React Crash Course 2019
 
 https://www.youtube.com/watch?v=sBws8MSXN7A&t=0s&index=2&list=PLillGF-RfqbYeckUaD1z6nviTp31GLTH8
@@ -66,12 +69,56 @@ https://www.youtube.com/watch?v=sBws8MSXN7A&t=0s&index=2&list=PLillGF-RfqbYeckUa
 		
 	public/index.html <-- src/index.js <-- src/App.js <-- components
 	
-	- Clean up:
+9. Clean up:
 		1. delete index.css, stop importing it into index.js
 		2. delete the logo.svg, stop importing it in app.js
 		3. delete all the other JSX in app.js , just have the main div 
 		4. update app.css as to your liking
 		5. take out service worker in index.js and file
 		6. take out image files
+	
+10. make component folder
+		- in src, mkdir components, cd components, touch Todo.js (first componenent)
+		  (convention for components files is UpperCase.js)
+		- copy app.js as a template
+		- replace app with todos, remove css 
 		
+		Todos.js
+				import React, { Component } from 'react';
+				// removed css 
+
+				class 👉 Todos extends Component { //replaced App with Todos
+					render() {
+						return (
+							<div>
+								<h1> Todos </h1>
+							</div>
+						);
+					}
+				}
+
+				export default 👉 Todos; //replaced App with Todos
+
+			- in app.js, import Todos.js
+
+			App.js
+
+import React, { Component } from 'react';
+import Todos from './components/Todos'; // 👈 added this
+
+import './App.css';
+
+class App extends Component {
+	render() {
+		return (
+			<div className="App">
+				<h1> 🦐my react app🦀 </h1>
+				<Todos />  // 👈 added components like a custom HTML tag
+			</div>
+		);
+	}
+}
+
+export default App;
+11. 
 		
