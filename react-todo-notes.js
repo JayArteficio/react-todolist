@@ -182,3 +182,12 @@ export default App;
 17. Add unique id in list to avoid the error
 
 			< TodoItem key = { todo.id } todo = { todo } />
+
+18. PropTypes: validation tool for props 
+		in Todos.js 
+		import PropTypes from 'prop-types';
+
+		and before export add 
+		Todos.propTypes = {
+			todos: PropTypes.array.isRequired
+		}
