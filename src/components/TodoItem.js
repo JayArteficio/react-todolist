@@ -6,8 +6,9 @@ import PropTypes from "prop-types";
 export class TodoItem extends Component {
   render() {
     return (
-      <div style={{ backgroundColor: "#f4f4f4" }}>
-        <p> Todo Item: {this.props.todo.title} </p>
+    //<div style={{ backgroundColor: "#f4f4f4" }}>
+      <div style={ itemStyle }>
+         <p> Todo Item: {this.props.todo.title} </p>
       </div>
     );
   }
@@ -15,4 +16,9 @@ export class TodoItem extends Component {
 TodoItem.propTypes = {
   todo: PropTypes.object.isRequired
 };
+
+//Style
+const itemStyle = {
+    backgroundColor: '#f4f4f4'
+}
 export default TodoItem;

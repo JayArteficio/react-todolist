@@ -217,6 +217,15 @@ export default App;
 
 21.  Adding styling inline to todoitems
 			in todoItem.js
-				< div style = {{ backgroundColor: "#f4f4f4" }}>
+		A.		< div style = {{ backgroundColor: "#f4f4f4" }}>
 			// use {{}} doubvle brackets for inline
 			// instead of hyphens in CSS, use camelCase
+		B. Using a variable
+			// declare the variable
+			const = itemStyle = {
+				backgroundColor: '#f4f4f4'
+			}
+			// only use single brackets {} to call that variable
+			< div style = { itemStyle }
+}>
+
