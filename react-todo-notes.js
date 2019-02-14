@@ -191,3 +191,11 @@ export default App;
 		Todos.propTypes = {
 			todos: PropTypes.array.isRequired
 		}
+
+19. do the same thing for todoItem 
+		in TodoItem.js 
+		import PropTypes from 'prop-types';
+		//now, change the Todos to TodoItem (name of the class) and todos to todo and array to object
+	👉	TodoItem.propTypes = {
+	👉		todo: PropTypes.object.isRequired
+		}

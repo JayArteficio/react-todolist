@@ -1,6 +1,7 @@
 // created with ES7 React / Redux / GraphQL / React - Native snippets
 // keystroke: rec+TAB
 import React, { Component } from "react";
+import PropTypes from "prop-types";
 
 export class TodoItem extends Component {
   render() {
@@ -11,5 +12,7 @@ export class TodoItem extends Component {
     );
   }
 }
-
+TodoItem.propTypes = {
+  todo: PropTypes.object.isRequired
+};
 export default TodoItem;
