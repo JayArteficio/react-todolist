@@ -107,6 +107,7 @@ import React, { Component } from 'react';
 import Todos from './components/Todos'; // 👈 added this
 
 import './App.css';
+import TodoItem from "./src/components/TodoItem";
 
 class App extends Component {
 	render() {
@@ -164,4 +165,7 @@ export default App;
 			return this.props.todos.map((todo) => (
 				<h3>{todo.title} </h3>
 			));
-14. 
+14. Install in VSCode to generate components more easily
+		ES7 React / Redux / GraphQL / React - Native snippets
+
+		in components folder, make TodoItem.js, and rec+TAB to generate a skeleton for a class-based component 

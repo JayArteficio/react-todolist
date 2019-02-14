@@ -13,12 +13,12 @@ class App extends Component {
       },
       {
         id: 2,
-        title: "Throw trash",
+        title: "Wash Dishes",
         completed: false
       },
       {
         id: 3,
-        title: "Throw trash",
+        title: "Shovel Snow",
         completed: false
       }
     ]
