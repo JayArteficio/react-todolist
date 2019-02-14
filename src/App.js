@@ -1,10 +1,9 @@
-import React, { Component } from 'react';
-import Todos from './components/Todos';
+import React, { Component } from "react";
+import Todos from "./components/Todos";
 
-import './App.css';
+import "./App.css";
 
 class App extends Component {
-
   state = {
     todos: [
       {
@@ -22,16 +21,15 @@ class App extends Component {
         title: "Throw trash",
         completed: false
       }
-
     ]
-  }
-  
+  };
+
   render() {
     console.log(this.state.todos); // just to show the state in console
     return (
       <div className="App">
         <h1> 🦐MY REACT APP🦀 </h1>
-        <Todos />
+        <Todos todos={this.state.todos} />
       </div>
     );
   }

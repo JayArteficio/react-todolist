@@ -153,3 +153,7 @@ export default App;
 12. Passing the state into the Todos component as a property
 	in app.js still:
 		< Todos todos={this.state.todos} />
+	in Todos.js 
+	render() {
+		console.log(this.props.todos);
+		will show that the props have been passed, also in React dev tools
