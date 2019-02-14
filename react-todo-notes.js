@@ -120,5 +120,34 @@ class App extends Component {
 }
 
 export default App;
-11. 
+
+11. Making State in main App compoenent. 
+
+	- simply an object with values of an array of objects like so:
+	in App.js before render
+
+		state = {
+			todos: [
+				{
+					id : 1,
+					title: "Throw trash",
+					completed: false
+				},
+				{
+					id: 2,
+					title: "Throw trash",
+					completed: false
+				},
+				{
+					id: 3,
+					title: "Throw trash",
+					completed: false
+				}
+
+			]
+		}
+
+		- can show state by console.logging or using React chrome dev tools 
+		render() {
+			console.log(this.state.todos); // will show the state in console
 		
