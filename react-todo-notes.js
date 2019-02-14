@@ -214,3 +214,9 @@ export default App;
 		TodoItem.js
 			- recieves the todo prop with (which is an object)
 				this.props.todo (in this case we get the .title)
+
+21.  Adding styling inline to todoitems
+			in todoItem.js
+				< div style = {{ backgroundColor: "#f4f4f4" }}>
+			// use {{}} doubvle brackets for inline
+			// instead of hyphens in CSS, use camelCase
