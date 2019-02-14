@@ -6,7 +6,7 @@ export class TodoItem extends Component {
   render() {
     return (
       <div>
-        <p>Todo Item:</p>
+        <p> Todo Item: {this.props.todo.title} </p>
       </div>
     );
   }

@@ -172,3 +172,10 @@ export default App;
 
 15. import TodoItem.js in Todos.js
 		import TodoItem from './TodoItem';
+
+16. Pass in Todos to todoitem as a prop, same pattern 
+				in Todos.js 
+			< TodoItem todo = { todo } />
+				in TodoItem.js
+			<p> {this.props.todo.title} </p>
+		

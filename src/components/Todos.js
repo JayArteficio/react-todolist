@@ -6,7 +6,7 @@ class Todos extends Component {
         console.log(this.props.todos);
         return this.props.todos.map( (todo)=> (
             // <h3>{ todo.title} </h3>
-            <TodoItem />
+            < TodoItem todo={todo} />
         ));
         
     }
