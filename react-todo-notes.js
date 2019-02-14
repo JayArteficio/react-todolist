@@ -169,3 +169,6 @@ export default App;
 		ES7 React / Redux / GraphQL / React - Native snippets
 
 		in components folder, make TodoItem.js, and rec+TAB to generate a skeleton for a class-based component 
+
+15. import TodoItem.js in Todos.js
+		import TodoItem from './TodoItem';
