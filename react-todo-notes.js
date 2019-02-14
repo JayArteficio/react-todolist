@@ -246,4 +246,14 @@ export default App;
 				}
 			// run it in the div's style 
 				<div style={this.getStyle()}>
+		
+		B. Using a ternary operator 
+				return {
+					padding: '10px',
+					borderBottom: '1px #ccc dotted',
+					textDecoration: this.props.todo.completed ? "line-through" : "none",
+					backgroundColor: this.props.todo.completed ? "red" : "#f4f4f4",
+				}
 
+	
+				
