@@ -199,3 +199,18 @@ export default App;
 	👉	TodoItem.propTypes = {
 	👉		todo: PropTypes.object.isRequired
 		}
+
+20. Recap for passing in props: 
+
+		App.js 
+			- has the state object
+			- Passes that state.todos to the Todos.js component
+				<Todos todos ={this.state.todos} />
+		Todos.js
+			- receives the todos prop (which is an array of objects) and can call it with
+				this.props.todos
+			- maps over it and passes the each todo item object into TodoItem.js with 
+				<TodoItem todo={todo}/>
+		TodoItem.js
+			- recieves the todo prop with (which is an object)
+				this.props.todo (in this case we get the .title)
