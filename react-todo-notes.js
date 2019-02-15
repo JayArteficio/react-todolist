@@ -253,7 +253,12 @@ export default App;
 					borderBottom: '1px #ccc dotted',
 					textDecoration: this.props.todo.completed ? "line-through" : "none",
 					backgroundColor: this.props.todo.completed ? "red" : "#f4f4f4",
-				}
+				}	
+40 minutes
 
-	
+21. Add a check box input in TodoItem.js
+				      <div style={this.getStyle()}>
+						<input type="checkbox" />
+
+22. Need events to trigger the checkbox
 				

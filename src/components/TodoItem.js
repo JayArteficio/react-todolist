@@ -30,6 +30,7 @@ export class TodoItem extends Component {
     return (
     //<div style={{ backgroundColor: "#f4f4f4" }}>
       <div style={ this.getStyle() }>
+        <input type="checkbox" />
          <p> Todo Item: {this.props.todo.title} </p>
       </div>
     );
