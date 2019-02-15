@@ -271,4 +271,22 @@ export default App;
 					console.log(this.props)
 				}
 
+43min
+
+23. Without redux or webcontext api, we will have to "climb the ladder" or pass props down stream. 
+	So in order to markComplete the checkbox, 
+	we need to pass the state from app.js->Todo.js->TodoItem.js
+	via props: 
+				a. move markComplete() from TodoItem to Todos. 
+				b. change this.markComplete() to this.props.markComplete
+				c. in Todos.js,  add markComplete function just above render
+					markComplete = () => {
+						console.log("markComplete")
+					}
+				d. then  pass in the props,
+					< TodoItem key={todo.id} todo={todo} markComplete={this.markComplete} />
+				e. 
+
+
+
 				
