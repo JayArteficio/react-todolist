@@ -261,4 +261,14 @@ export default App;
 						<input type="checkbox" />
 
 22. Need events to trigger the checkbox
+						
+				// add event listener on input type 
+		        <input type="checkbox" onChange={this.markComplete()} />
+
+				// add the markComplete function, use arrows to avoid using bind.this
+
+				markComplete = (e) => {
+					console.log(this.props)
+				}
+
 				
