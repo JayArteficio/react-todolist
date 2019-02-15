@@ -317,6 +317,11 @@ Aside: in keybindings.json I added this for custom console.log
 		to 		        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
         				<p> Todo Item: {title} </p>
 
+		this passed the id up, so now in app.js, can now pass in id in markcomplete
+		  markComplete = (id) => {
+							console.log(id)
+						}
+
 
 
 				

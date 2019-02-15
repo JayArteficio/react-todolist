@@ -24,8 +24,8 @@ class App extends Component {
     ]
   };
 
-  markComplete = () => {
-    console.log("from app.js")
+  markComplete = (id) => {
+    console.log(id)
   }
   render() {
     console.log(this.state.todos); // just to show the state in console
