@@ -301,4 +301,6 @@ Aside: in keybindings.json I added this for custom console.log
 			"key": "cmd+l",
 			"command": "editor.action.insertSnippet",
 			"when": "editorTextFocus",
-        	"args": {"snippet": "console.log('$0');"}
+			"args": {"snippet": "console.log('$0');"}
+
+24. 
