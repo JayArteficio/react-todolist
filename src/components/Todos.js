@@ -13,7 +13,6 @@ class Todos extends Component {
             // <h3>{ todo.title} </h3>
             < TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} />
         ));
-        
     }
 }
 //PropTypes

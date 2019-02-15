@@ -308,7 +308,9 @@ Aside: in keybindings.json I added this for custom console.log
 			<input type="checkbox" onChange={this.props.markComplete} />
 		to 
 			<input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} />
-25. Use destructing to simplify the code
+
+25. Use destructing to simplify the code (Todo: need to fully undertsand how the props are passed up)
+
 		in TodoItem.js above return:
 			const { id, title } = this.props.todo;
 		change         <input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} />
@@ -322,7 +324,19 @@ Aside: in keybindings.json I added this for custom console.log
 							console.log(id)
 						}
 
+26. Now  we can change the state in App.js and toggle completed to true and false 
 
+markComplete = (id) => {
+	// console.log(id)
+	this.setState({ todos: this.state.todos.map(todo => {
+		if (todo.id === id) {
+			todo.completed = !todo.completed
+		}
+		return todo;
+	}) })
+}
+
+min 50. 
 
 				
 
