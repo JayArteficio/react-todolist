@@ -303,12 +303,23 @@ Aside: in keybindings.json I added this for custom console.log
 			"when": "editorTextFocus",
 			"args": {"snippet": "console.log('$0');"}
 			
-			24. Add id when we click on the check, we need to bind the id;
-					in TodoItem.js change this 
-			        	<input type="checkbox" onChange={this.props.markComplete} />
-					to 
-						<input type="checkbox" onChange={this.props.markComplete.bind(this, this.proprs.todo.id)} />
+24. Add id when we click on the check, we need to bind the id;
+		in TodoItem.js change this 
+			<input type="checkbox" onChange={this.props.markComplete} />
+		to 
+			<input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} />
+25. Use destructing to simplify the code
+		in TodoItem.js above return:
+			const { id, title } = this.props.todo;
+		change         <input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} />
+						<p> Todo Item: {this.props.todo.title} </p>
 
+		to 		        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
+        				<p> Todo Item: {title} </p>
+
+
+
+				
 
 
 

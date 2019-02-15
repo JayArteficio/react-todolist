@@ -30,11 +30,12 @@ export class TodoItem extends Component {
 //   };
 
   render() {
+    const { id, title } = this.props.todo;
     return (
       //<div style={{ backgroundColor: "#f4f4f4" }}>
       <div style={this.getStyle()}>
-        <input type="checkbox" onChange={this.props.markComplete.bind(this, this.props.todo.id)} />
-        <p> Todo Item: {this.props.todo.title} </p>
+        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
+        <p> Todo Item: {title} </p>
       </div>
     );
   }
