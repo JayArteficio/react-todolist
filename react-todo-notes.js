@@ -302,5 +302,14 @@ Aside: in keybindings.json I added this for custom console.log
 			"command": "editor.action.insertSnippet",
 			"when": "editorTextFocus",
 			"args": {"snippet": "console.log('$0');"}
+			
+			24. Add id when we click on the check, we need to bind the id;
+					in TodoItem.js change this 
+			        	<input type="checkbox" onChange={this.props.markComplete} />
+					to 
+						<input type="checkbox" onChange={this.props.markComplete.bind(this, this.proprs.todo.id)} />
 
-24. 
+
+
+
+						
