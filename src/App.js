@@ -24,12 +24,15 @@ class App extends Component {
     ]
   };
 
+  markComplete = () => {
+    console.log("from app.js")
+  }
   render() {
     console.log(this.state.todos); // just to show the state in console
     return (
       <div className="App">
         <h1> 🦐MY REACT APP🦀 </h1>
-        <Todos todos={this.state.todos} />
+        <Todos todos={this.state.todos} markComplete={this.markComplete}/>
       </div>
     );
   }

@@ -285,8 +285,20 @@ export default App;
 					}
 				d. then  pass in the props,
 					< TodoItem key={todo.id} todo={todo} markComplete={this.markComplete} />
-				e. 
+				e. Now we really want it to come from app.js' state so it has to go one more step up.
+					- delete the markComplete() in Todos.js
+					- still in Todos.js, change markComplete={this.markComplete} to 
+											-->	markComplete={this.props.markComplete}
+					- in App.js create markComplete() and pass in the function to Todos.js
+						        <Todos todos={this.state.todos} markComplete={this.markComplete} />
+					- Still in App.js, add the markComplete()
+						markComplete = () => {
+							console.log("from app.js")
+						}
 
-
-
-				
+Aside: in keybindings.json I added this for custom console.log 
+		// custom keybinding to make console.log with cursor inside
+			"key": "cmd+l",
+			"command": "editor.action.insertSnippet",
+			"when": "editorTextFocus",
+        	"args": {"snippet": "console.log('$0');"}
