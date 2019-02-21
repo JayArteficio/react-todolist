@@ -396,5 +396,16 @@ Okay, I got it.
 				this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
 			}
 					  
-					  
+28. Make Header function-based Component (only has a return)
+
+		in components folder, mkdir layout, cd to it, touch Header.js
 						
+		rfc+tab( just return an h1 for now 
+
+		import it in the app.js, add it above the todos <Header />
+
+		add some styling
+
+		
+
+		
