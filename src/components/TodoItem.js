@@ -1,16 +1,16 @@
 // created with ES7 React / Redux / GraphQL / React - Native snippets
 // keystroke: rec+TAB
-import React, { Component } from "react";
-import PropTypes from "prop-types";
+import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 
 export class TodoItem extends Component {
   getStyle = () => {
     // using ternary
     return {
-      padding: "10px",
-      borderBottom: "1px #ccc dotted",
-      textDecoration: this.props.todo.completed ? "line-through" : "none",
-      backgroundColor: this.props.todo.completed ? "red" : "#f4f4f4"
+      padding: '10px',
+      borderBottom: '1px #ccc dotted',
+      textDecoration: this.props.todo.completed ? 'line-through' : 'none',
+      backgroundColor: this.props.todo.completed ? 'red' : '#f4f4f4'
     };
     // using if/else
     // if(this.props.todo.completed) {
@@ -25,17 +25,22 @@ export class TodoItem extends Component {
     // }
   };
 
-//   markComplete = e => {
-//     console.log(this.props);
-//   };
+  //   markComplete = e => {
+  //     console.log(this.props);
+  //   };
 
   render() {
     const { id, title } = this.props.todo;
     return (
       //<div style={{ backgroundColor: "#f4f4f4" }}>
       <div style={this.getStyle()}>
-        <input type="checkbox" onChange={this.props.markComplete.bind(this, id)} />
-        <p> Todo Item: {title} </p>
+        <p>
+          <input
+            type="checkbox"
+            onChange={this.props.markComplete.bind(this, id)}
+          />{' '}
+          {title}
+        </p>
       </div>
     );
   }
