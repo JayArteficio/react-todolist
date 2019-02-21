@@ -367,10 +367,34 @@ Okay, I got it.
 			return todo;
 		}) })
 
+27. Adding Delete Button 
 
+		in TodoItem.js add a button after the title
+		<button style={btnStyle}>delete</button>
 
+		const btnStyle = {
+			background: '#ff0000',
+			color: '#fff',
+			border: '2px 0px',
+			padding: '7px 10px',
+			borderRadius: '10%',
+			cursor: 'pointer',
+			float: 'right'
+		}
 
+		add onClick on the button
+			<button onClick={this.props.delTodo.bind(this, id)} style=... // remeber to bind 
 
+		in Todos.js  add the go-between in TodoItem 
+			<TodoItem key={todo.id} todo={todo} markComplete={this.props.markComplete} delTodo={this.props.delTodo} />
 
+		in App.js in todos make the function and pass it down add above render 
+			<Todos todos={this.state.todos} markComplete={this.markComplete} delTodo={this.delTodo} />							
 
+			delTodo = (id) => {
+				// console.log(id); to test it first 
+				this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)] });
+			}
+					  
+					  
 						
