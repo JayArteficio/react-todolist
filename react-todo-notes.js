@@ -326,19 +326,50 @@ Aside: in keybindings.json I added this for custom console.log
 
 26. Now  we can change the state in App.js and toggle completed to true and false 
 
-markComplete = (id) => {
-	// console.log(id)
-	this.setState({ todos: this.state.todos.map(todo => {
-		if (todo.id === id) {
-			todo.completed = !todo.completed
-		}
-		return todo;
-	}) })
-}
+	markComplete = (id) => {
+		// console.log(id)
+		this.setState({ todos: this.state.todos.map(todo => {
+			if (todo.id === id) {
+				todo.completed = !todo.completed
+			}
+			return todo;
+		}) })
+	}
+
+Need to understand setSate better.
+// React dev interview questions
+NOTE: https://medium.com/@baphemot/a-react-job-interview-recruiter-perspective-f1096f54dd16
+
+note: Best setState link so far:
+		https://css-tricks.com/understanding-react-setstate
+
+		Wrapping Up
+		When working with setState(), these are the major things you should know:
+
+		Update to a component state should be done using setState()
+		You can pass an object or a function to setState()
+		Pass a function when you can to update state multiple times
+		Do not depend on this.state immediately after calling setState() and make use of the updater function instead.
 
 min 50. 
 
-				
+Okay, I got it. 
+		{/* setState is a function that takes in an object or a function that 
+		returns an object that will update state. Often times we use a function to 
+		determine the value.  (aside, we use functions to avoid problems with setState's 
+		asynchronous nature) */}
+		// in the state object, we set the key 'todos' with a map function 
+		// ie. we are passing in an object with a method as the value
+		this.setState({ todos: this.state.todos.map(todo => {
+			if (todo.id === id) {
+				todo.completed = !todo.completed
+			}
+			return todo;
+		}) })
+
+
+
+
 
 
 
