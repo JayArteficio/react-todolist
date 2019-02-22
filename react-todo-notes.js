@@ -457,3 +457,42 @@ export default class AddTodo extends Component {
 .btn:hover {
 	backgorund: #667;
 }
+
+30. Functionality of add todo button 
+
+	in AddTodo.js add state with the title: '', in input field, set
+	 value={this.state.title} this sets the value of the input to the state value and 
+	onChange={this.onChange}, then make the onChange function
+
+	onChange = (e) => this.setState({ title: e.target.value });
+	{/* note, if you had a lot of fields, you can also do this below  */}
+	onChange = (e) => this.setState({ [e.target.name]: e.target.value });
+
+	- then add style 
+		<form style={{ display: 'flex' }}> 
+
+	- Add submit functionality
+		add onSubmit function on the form not the input
+			<form onSubmit={this.onSubmit}....
+
+		make the function 
+			onSubmit = (e) => {
+				e.preventDefault();
+				this.props.addTodo(this.state.title);  // this passes the title as a prop to addTodo, 
+				this.setSate({ title: ' ')}; // clears the input field by setting state
+			}
+
+	- then in App.js do 
+			<AddTodo addTodo={ this.addTodo } />
+	
+	then add the functiom
+
+			addTodo = (title) = {
+				// console.log(title); this is just to test it
+				const newTodo = {
+					id: 4,
+					tittle, //title: title, same as 
+					completed: false;
+				}
+				this.setState({ todos: [...this.state.todos, newTodo] })
+			}
