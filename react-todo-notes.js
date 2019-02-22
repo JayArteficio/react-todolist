@@ -406,6 +406,54 @@ Okay, I got it.
 
 		add some styling
 
-		
+29.  Adding Todo Function Component
 
+		- make AddTodo.js component 
+			import React, { Component } from 'react';
+
+export default class AddTodo extends Component {
+  render() {
+    return (
+      <form style={{ display: 'flex' }}>
+        <input
+            type="text"
+            name="title"
+            placeholder="Add Todo..."
+            style={{ flex: '10' }}
+        />
+        <input
+            type='submit'
+            value='Submit'
+            className='btn'
+            style={{flex: '1'}}
+        />
+     </form>
+    );
+					  }
+					}
+								
+							- Import then add it in App.js 
+					
+							import AddTodo from './components/AddTodo';
+      <div className="App">
+							<Header />
+							<AddTodo />
+					(wrap it all in a container as well)
+		- Put some styling for btn in  App.css 
 		
+.container {
+	padding: 0 1rem;
+}
+
+.btn {
+	display: inline-block;
+	border: none;
+	background: #555;
+	color: #fff;
+	padding: 7px 20px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	backgorund: #667;
+}
