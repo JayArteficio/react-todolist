@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import Todos from './components/Todos';
 import Header from './components/layout/Header';
 import AddTodo from './components/AddTodo';
+import uuid from 'uuid';
 
 import './App.css';
 
@@ -9,17 +10,17 @@ class App extends Component {
   state = {
     todos: [
       {
-        id: 1,
+        id: uuid.v4(),
         title: 'Throw trash',
         completed: false
       },
       {
-        id: 2,
+        id: uuid.v4(),
         title: 'Wash Dishes',
         completed: false
       },
       {
-        id: 3,
+        id: uuid.v4(),
         title: 'Shovel Snow',
         completed: false
       }
@@ -46,16 +47,16 @@ class App extends Component {
     });
   };
 
-  addTodo = (title) => {
+  addTodo = title => {
     // console.log(title);
     const newTodo = {
-      id: 4,
+      id: uuid.v4(),
       title,
       completed: false
-    }
-    this.setState({ todos: [...this.state.todos, newTodo] })
-  }
-  
+    };
+    this.setState({ todos: [...this.state.todos, newTodo] });
+  };
+
   render() {
     console.log(this.state.todos); // just to show the state in console
     return (

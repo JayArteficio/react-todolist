@@ -502,6 +502,6 @@ export default class AddTodo extends Component {
 31. UUID 
 		- will generate random id's for our list
 		> npm i uuid 
-		(if you get problems, delete node modules, .npm install, then npm i uuid)
+		(if you get problems, delete node modules, >npm install, then >npm i uuid)
 		- import uuid from  'uuid'; in App.js
 		- put id: uuid.v4(); anywhere you want to generate an id. 
