@@ -491,8 +491,17 @@ export default class AddTodo extends Component {
 				// console.log(title); this is just to test it
 				const newTodo = {
 					id: 4,
-					tittle, //title: title, same as 
+					tittle, //same as title: title in ES6 
 					completed: false;
 				}
 				this.setState({ todos: [...this.state.todos, newTodo] })
 			}
+
+			min 1:13:30 UUID
+
+31. UUID 
+		- will generate random id's for our list
+		> npm i uuid 
+		(if you get problems, delete node modules, .npm install, then npm i uuid)
+		- import uuid from  'uuid'; in App.js
+		- put id: uuid.v4(); anywhere you want to generate an id. 
