@@ -505,3 +505,39 @@ export default class AddTodo extends Component {
 		(if you get problems, delete node modules, >npm install, then >npm i uuid)
 		- import uuid from  'uuid'; in App.js
 		- put id: uuid.v4(); anywhere you want to generate an id. 
+			(suppose to use the version number but 4 worked even if it was version 3)
+
+32. React Router
+
+		- > npm i react-router-dom
+		- npm start again 
+		- in components, mkdir pages, cd in it, touch About.js
+		- make it a function based components rcf+tab
+		- can use <React.Fragment>  </React.Fragment> instead of a div 
+		 to wrap the whole component. this will not show the extra div, like 
+		 an invisible wrapper.
+		- make the about text 
+		- import in Apps.js
+			import { BrowserRouter as Router, Route } from 'react-router-dom';
+			// we're grabbing BrowserRouter and Route from the package
+			// renaming BrowserRouter as Browser for brevity
+		- Wrap the App.js return in <Router></Router>
+		- make paths and add the components you want in it. (rember to bring in any component)
+			<Header />
+				<Route exact path='/' render={props => (
+					<React.Fragment>
+						<AddTodo addTodo..../>
+						<Todos... /> 
+					</React.Fragment>
+				)} />
+				<Route path='/about' component={About} />
+		- Again, wrap the whole thing in <Router></Router>
+		then wrap each pages in <Route path='/about' component={About} />
+		or if there are lots of components
+		<Route path='/index' render={props => (
+			<React.Fragment>
+				// place components in here 
+			</React.Fragment>
+		)} />
+
+33. 
