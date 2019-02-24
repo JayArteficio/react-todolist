@@ -540,4 +540,14 @@ export default class AddTodo extends Component {
 			</React.Fragment>
 		)} />
 
-33. 
+33. Adding links in Header 
+
+	- In react we use LINKS instead of a tags 
+	- import { Link } from 'react-router-dom';
+	- <Link to='/'>Home</Link> | <Link to='/about'>About</Link>
+	- Add Style to we can see it.
+	- <Link style={linkStyle} to='/'>Home</Link> | <Link style={linkStyle}  to='/about'>About</Link>
+	 const linkStyle = {
+		 color: '#fff',
+		 textDecoration: 'none'
+	 }
