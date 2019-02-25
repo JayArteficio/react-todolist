@@ -567,4 +567,27 @@ export default class AddTodo extends Component {
 		 }
 		 -?_limit=10 adding this to the url will limit to 10
 		 -  change the console log to setState 
-		 		.then(res => this.setState({ todos: res.data }))
+				 .then(res => this.setState({ todos: res.data }))
+			   	
+			   35. Making a post request when adding a todo. making a post request to json placeholder
+				   mimicing a real-life backend
+						- comment out uuid
+						- change addTodo from :
+			   
+	addTodo = title => {
+		const newTodo = {
+			id: uuid.v4(),
+			title,
+			completed: false
+		};
+    	this.setState({todos: [...this.state.todos, newTodo] });
+							  };
+	addTodo = title => {
+		axios.post('https://jsonplaceholder.typicode.com/todos', {
+			title,
+			completed: false
+		})
+    		.then(res => this.setState({todos: [...this.state.todos, res.data] });
+	};
+						
+							  
