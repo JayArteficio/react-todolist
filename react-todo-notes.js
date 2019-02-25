@@ -590,4 +590,9 @@ export default class AddTodo extends Component {
     		.then(res => this.setState({todos: [...this.state.todos, res.data] });
 	};
 						
-							  
+35. Delete Request to the Server
+	- use backtics and add ${id} to specify the id
+	-delTodo = id => {
+		axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
+		.then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]} ));
+	}
