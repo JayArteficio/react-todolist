@@ -5,28 +5,34 @@ import AddTodo from './components/AddTodo';
 import { BrowserRouter as Router, Route } from 'react-router-dom';
 import About from './components/pages/About';
 import uuid from 'uuid';
+import axios from 'axios';
 
 import './App.css';
 
 class App extends Component {
   state = {
-    todos: [
-      {
-        id: uuid.v4(),
-        title: 'Throw trash',
-        completed: false
-      },
-      {
-        id: uuid.v4(),
-        title: 'Wash Dishes',
-        completed: false
-      },
-      {
-        id: uuid.v4(),
-        title: 'Shovel Snow',
-        completed: false
-      }
+     todos: [
+    //   {
+    //     id: uuid.v4(),
+    //     title: 'Throw trash',
+    //     completed: false
+    //   },
+    //   {
+    //     id: uuid.v4(),
+    //     title: 'Wash Dishes',
+    //     completed: false
+    //   },
+    //   {
+    //     id: uuid.v4(),
+    //     title: 'Shovel Snow',
+    //     completed: false
+    //   }
     ]
+  };
+  componentDidMount() {
+    axios.get('https://jsonplaceholder.typicode.com/todos?_limit=5')
+      // .then(res => console.log(res.data))
+      .then(res => this.setState({ todos: res.data }))
   };
 
   // this toggles complete when checkbox is clicked

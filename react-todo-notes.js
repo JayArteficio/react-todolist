@@ -551,3 +551,20 @@ export default class AddTodo extends Component {
 		 color: '#fff',
 		 textDecoration: 'none'
 	 }
+
+34. Making HTTP requests 
+
+	- use JSONPlaceholder which allows us to have a backend to work with
+	- > npm install axios (an http library so we don't have to use fetch)
+	- import axios from 'axios';
+	- now we will fetch the todos from the jsonplaceholder 
+	 so we empty the state todos in app.js 
+	- we use this lfiecyle method:
+	 just above markComplete: this runs right after component mounts
+	 	componentDidMount() {
+			axios.get('https://jsonplaceholder.typicode.com/todos') //url of json placeholder site todos
+			.then(res => console.log(res.data);
+		 }
+		 -?_limit=10 adding this to the url will limit to 10
+		 -  change the console log to setState 
+		 		.then(res => this.setState({ todos: res.data }))
