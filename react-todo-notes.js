@@ -596,3 +596,15 @@ export default class AddTodo extends Component {
 		axios.delete(`https://jsonplaceholder.typicode.com/todos/${id}`)
 		.then(res => this.setState({ todos: [...this.state.todos.filter(todo => todo.id !== id)]} ));
 	}
+
+36.  Change the proptypes 
+		- in Todos.js and todoItem.js
+			to todos, add markComplete and delTodo w/c are both functions 
+		- in AddTodo.js
+			import PropTypes form 'prop-types';
+			add the addTodo, markcomplete and delTodo in proptypes. 
+			making sure to change the name of the propetyeps dpending on the file/component</form>
+
+
+					
+									END
